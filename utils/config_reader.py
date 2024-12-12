@@ -7,6 +7,8 @@ Created on 12-Dec-2024
 import configparser
 import os
 
+load_dotenv()
+
 # Create a ConfigParser object
 config = configparser.ConfigParser()
 
@@ -32,18 +34,18 @@ def load_config():
 
 def get_property(section, key):
     """
-    Retrieves the value of a property from the loaded configuration file.
+    Retrieves the value of a property from the environment variables.
     Args:
-        section (str): The section in the configuration file.
-        key (str): The key within the section.
+        section (str): The section in the configuration file (not used here).
+        key (str): The key for the property (e.g., 'OPENAI_API_KEY').
 
     Returns:
-        str: The value associated with the specified key.
+        str: The value associated with the specified key from the environment variables.
     """
     try:
-        return config[section][key]
+        return os.getenv(key)  # Retrieve the environment variable directly
     except KeyError as e:
-        raise KeyError(f"Property not found: Section '{section}', Key '{key}'") from e
+        raise KeyError(f"Property not found: Key '{key}'") from e
 
 # Example usage
 if __name__ == "__main__":
