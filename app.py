@@ -44,9 +44,10 @@ def main():
         st.session_state.conversation_history = []
 
     # Display chat history
-    st.title("AI Travel Advisor")
-    st.markdown("Your personal AI Travel advisor to assist you on queries related to Visa requirements, Hotels, City & Airport information, flights and much more"
-                "How can I assist you with your travel plans today?")
+    st.title("Welcome to Your AI Travel Advisor!")
+    st.markdown("I'm here to help you with everything you need for your travels—whether it's finding out visa requirements, booking hotels, exploring cities, checking flights, or any other travel info."
+                "How can I assist you with your travel plans today?😊"
+                )
 
     for message in st.session_state.conversation_history:
         role = "user" if message["role"] == "user" else "assistant"
