@@ -6,6 +6,7 @@ Created on 12-Dec-2024
 
 import configparser
 import os
+from dotenv import load_dotenv
 
 load_dotenv()
 
