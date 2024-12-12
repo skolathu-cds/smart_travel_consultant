@@ -22,6 +22,7 @@ def generate_visa_prompt(nationality, destination, residence, purpose):
         f"residing in {residence}, visiting {destination} for {purpose}? "
         "Include visa application process, essential travel tips, and any mandatory documents. "
         "Provide URLs of official embassies or consulates for reference."
+        "Include all recent news and exceptions those travellers should know."
     )
 
 def generate_hotel_prompt(user_query):

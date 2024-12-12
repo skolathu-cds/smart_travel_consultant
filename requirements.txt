@@ -1,0 +1,13 @@
+streamlit
+google-generativeai
+requests
+python-dotenv
+langchain
+openai==0.28
+chromadb
+pandas
+python-docx
+PyPDF2
+fpdf
+langchain-community
+langchain-core
